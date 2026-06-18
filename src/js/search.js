@@ -26,7 +26,7 @@ function cardHtml(produto, i) {
   const sabor     = Array.isArray(produto.sabor) && produto.sabor.length
     ? produto.sabor[0].sabor : "Sem sabor";
   const tags      = Array.isArray(produto.tag) && produto.tag.length
-    ? produto.tag.map(t => `<span class="product-tag">${escapeHtml(t.tag)}</span>`).join("") : "";
+    ? `<span class="product-tag">${escapeHtml(produto.tag[0].tag)}</span>` : "";
 
   return `
     <a href="product.html?id=${produto.id}" class="product-card" style="animation-delay:${i * 50}ms">
@@ -75,9 +75,7 @@ async function buscar(query) {
     try {
         const res  = await fetch(`${BASE_URL}/produtos/pesquisa?nome_produto=${encodeURIComponent(q)}`);
         const data = await res.json();
-        console.log(data)
         const produtos = Array.isArray(data.response?.pesquisa) ? data.response.pesquisa.map(item => item.produto[0]).filter(Boolean) : [];
-        console.log(produtos)
 
         sub.textContent = produtos.length
         ? `${produtos.length} ${produtos.length === 1 ? "resultado encontrado" : "resultados encontrados"}`
