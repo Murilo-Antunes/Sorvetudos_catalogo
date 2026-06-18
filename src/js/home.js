@@ -50,7 +50,7 @@ async function fetchProdutosFiltrados() {
         `${BASE_URL}/produtos/pesquisa?nome=${encodeURIComponent(state.query.trim())}`
       );
       const data = await res.json();
-      return data.response.produto ?? [];
+      return  data.response.pesquisa.map(item => item.produto[0]).filter(Boolean);
     }
 
     // Monta os query params para o endpoint de filtro
