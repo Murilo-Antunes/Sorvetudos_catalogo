@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorvetudos</title>
+  <meta name="description" content="Sorvetudos: sorvetes artesanais cremosos feitos diariamente em São Paulo.">
+  <link rel="icon" href="src/img/logo/">
+
+  <!--Fontes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Inter:wght@400;500;600;700&display=swap">
+
+
+  <!--CSS-->
+  <link rel="stylesheet" href="src/css/variables.css">
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/animacoes.css">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/footer.css">
+  <link rel="stylesheet" href="src/css/aside.css">
+  <link rel="stylesheet" href="src/css/skeleton-loading.css">
+
+  <!--JAVASCRIPT-->
+  <script src="src/js/app.js" defer type="module"></script>
+  <script src="src/js/footer.js" defer></script>
+  <script src="src/js/header.js" defer></script>
+  
+</head>
+
+
+<body>
+  <div id="header-container"></div>
+  <main class="main">
+    <section id="home" class="hero hero-bg">
+      <div class="hero-grid">
+        <div id="surgir-grid" class="">
+          <div  class="hero-eyebrow">Coleção verão · 2026</div>
+          <h1>Sorvete <em>artesanal</em><br>que derrete<br>devagar.</h1>
+          <p class="lead">Receitas feitas todos os dias com leite fresco da fazenda e ingredientes selecionados ao redor do mundo. Sem corantes, sem pressa.</p>
+          <div class="hero-actions">
+            <a href="#sabores" class="btn-dark">Explorar sabores <span class="circle">→</span></a>
+          </div>
+          <dl class="hero-stats">
+            <div ><dt>Sabores</dt><dd id="numero-sabores" class="skeleton skeleton-text"><em></em></dd></div>
+            <div><dt>Aprovação</dt><dd id="numero-aprovacao" class="skeleton skeleton-text"><em></em></dd></div>
+            <div><dt>Top</dt><dd id="numero-top" class="skeleton skeleton-text"><em></em></dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-img-wrap skeleton skeleton-box">
+            <img src="" alt="">
+            <div class="hero-img-caption">
+              <p class="small"></p>
+              <p class="big"></p>
+            </div>
+          </div>
+          <div id="surgir-pill" class="hero-pill pill-top" style="animation-delay:150ms">
+            <div class="ic" style="background:var(--mint)">🌿</div>
+            <div><div class="t">100% natural</div><div class="s">Sem corantes</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="destaques" class="section" style="padding-top:80px;padding-bottom:0">
+      <div class="featured-head">
+        <div>
+          <p class="eyebrow">#01 · Em destaque</p>
+          <h2>O sabor da semana.</h2>
+        </div>
+        <a href="#" class="featured-link">Ver produto ↗</a>
+      </div>
+      <a href="#" class="featured-card">
+        <div class="featured-img skeleton skeleton-box">
+          <img src="" alt="Chocolate Supremo">
+          <span class="featured-tag">Em Alta</span>
+        </div>
+        <div>
+          <div class="featured-meta"></div>
+          <h3 class="skeleton skeleton-text"></h3>
+          <p class="desc"></p>
+          <div class="featured-foot">
+            <div><p class="featured-price-l skeleton skeleton-text"></p><p class="featured-price-v"></p></div>
+            <span class="featured-cta">Provar agora →</span>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <section class="section" style="padding-top:80px;padding-bottom:0">
+      <div class="manifesto">
+        <div>
+          <div class="ic"><img src="./src/img/icons/folha.svg" alt="Ingredientes"></div>
+          <h4>Ingredientes reais</h4>
+          <p>Frutas selecionadas, leite da fazenda e chocolate belga 70%. Sem atalhos.</p>
+        </div>
+        <div>
+          <div class="ic"><img src="./src/img/icons/medalha.svg" alt="Ingredientes"></div>
+          <h4>Receitas autorais</h4>
+          <p>Cada sabor é desenvolvido pela nossa chef pâtissière por meses até chegar até você.</p>
+        </div>
+        <div>
+          <div class="ic"><img src="./src/img/icons/caminhao.svg" alt="Logistica"></div>
+          <h4>Chega gelado</h4>
+          <p>Entrega em até 30 minutos em embalagem térmica reutilizável dentro de São Paulo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sabores" class="section" style="padding-top:80px;padding-bottom:0">
+      <div class="catalog-head">
+        <div>
+          <p class="eyebrow">#02 · Catálogo</p>
+          <h2>Todos os <em>sabores</em>.</h2>
+          <p class="sub">Feitos hoje, prontos para a sua casa em poucos minutos.</p>
+        </div>
+        <div class="catalog-controls">
+          <div class="catalog-search">
+            <input id="catalog-search" placeholder="Buscar sabor…" autocomplete="off">
+          </div>
+          <button id="filters-btn" class="btn-filters">
+            ⚙ Filtros <span id="filters-badge" class="badge" style="display:none"></span>
+          </button>
+        </div>
+      </div>
+      <div id="categoria-catalogo" class="categoria-catalogo"></div>
+      <div id="filters-panel" class="filters-panel"></div>
+      <div id="catalog-grid" class="grid-2 ">
+        
+
+      </div>
+      <div id="see-more" class="see-more" style="display:none">
+        <button>Ver mais sabores <span class="circle">→</span></button>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;padding-bottom:0">
+      <div class="spotlight">
+        <a href="#" id="milkshakes" class="skeleton skeleton-box">
+          <img src="" alt="Milkshake de Ovomaltine">
+          <div class="overlay"></div>
+          <div class="content">
+            <p class="cat"></p>
+            <h3 class="skeleton skeleton-text"></h3>
+            <p class="desc"></p>
+            <div class="foot">
+              <span class="price skeleton skeleton-text"></span>
+              <span class="more skeleton skeleton-text"></span>
+            </div>
+          </div>
+        </a>
+        <a href="#" id="sundaes" class="skeleton skeleton-box">
+          <img src="" alt="Sundae Caramelo">
+          <div class="overlay"></div>
+          <div class="content">
+            <p class="cat"></p>
+            <h3 class="skeleton skeleton-text"></h3>
+            <p class="desc"></p>
+            <div class="foot">
+              <span class="price skeleton skeleton-text"></span>
+              <span class="more skeleton skeleton-text"></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+  </main>
+
+</body>
+</html>
